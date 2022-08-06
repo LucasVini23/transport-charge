@@ -8,19 +8,20 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.Id;
 
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Document
 @Builder
-public class Cliente {
+public class Carga {
 
     @Id
-    private String id;
-    private String cnpj;
-    private String fantasyName;
-    private String cep;
-    private String segment;
+    private String codRastreio;
+    private Long peso;
+    private String preco;
+    private String destino;
+    private String descricao;
+    private Entregador entregador;
+    private Cliente cliente;
 
 }

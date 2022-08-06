@@ -4,27 +4,23 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@Document
 @Builder
 public class Entregador {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
     private String cpf;
     private String nome;
     private String cep;
     private String veiculo;
-    private String carga;
 
 
 }
